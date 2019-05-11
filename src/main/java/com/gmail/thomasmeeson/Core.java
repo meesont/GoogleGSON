@@ -11,23 +11,24 @@ public class Core {
 
     public static void main(String[] args) {
 
-//        GsonBuilder builder = new GsonBuilder();
-//        builder.setPrettyPrinting();
-//        builder.serializeNulls();
-//        Gson gson = builder.create();
 
         Account account = new Account("Tom", "Meeson", "Mr", 0);
-//        System.out.println(gson.toJson(account));
+
+        writeOutput(account, "output");
 
     }
 
-    public static void writeOutput() {
+    public static void writeOutput(Object obj, String fileName) {
         try{
-            Writer writer = new FileWriter("out.json");
+            Writer writer = new FileWriter(fileName + ".json");
 
             GsonBuilder gsonBuilder = new GsonBuilder();
             gsonBuilder.setPrettyPrinting();
             Gson gson = gsonBuilder.create();
+
+            writer.write(gson.toJson(obj));
+            System.out.println("Successfully wrote to file: " + fileName + ".json");
+            writer.close();
 
         } catch (IOException e) {
             System.out.println("IO Exception occurred");
