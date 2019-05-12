@@ -1,0 +1,21 @@
+{
+  "accounts":
+          [
+            {
+              "balance": 100000.0,
+              "forename": "Sam",
+              "surname": "Smith",
+              "title": "Sir",
+              "accountId": "90eedb8c-0adf-4dac-bf1b-055f2527c788",
+              "creationDate": "May 12, 2019 12:24:53 PM"
+            },
+            {
+              "balance": 0.0,
+              "forename": "Tom",
+              "surname": "Meeson",
+              "title": "Mr",
+              "accountId": "ef40022b-80e4-4a70-ac19-b9339042f60a",
+              "creationDate": "May 12, 2019 12:24:53 PM"
+            }
+          ]
+}
