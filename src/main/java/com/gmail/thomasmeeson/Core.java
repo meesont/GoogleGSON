@@ -70,4 +70,26 @@ public class Core {
             }
         }
     }
+
+
+    public static void readInput(String fileName, String extension) {
+
+        GsonBuilder gsonBuilder = new GsonBuilder();
+        gsonBuilder.setPrettyPrinting();
+
+        Gson gson = gsonBuilder.create();
+
+        BufferedReader br = null;
+
+        try {
+            br = new BufferedReader(new FileReader(fileName + extension));
+
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File: "+ fileName +" not found");
+//            e.printStackTrace();
+
+        }
+
+    }
 }

@@ -1,34 +1,20 @@
 package com.gmail.thomasmeeson;
 
 import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 
-import javax.annotation.Generated;
 import java.util.Date;
 import java.util.UUID;
 
-@Generated("jsonschema2pojo")
-public class Account {
+public class AccountOld {
 
-    @SerializedName("balance")
     @Expose
-    private Double balance;
-    @SerializedName("forename")
+    private double balance;
     @Expose
-    private String forename;
-    @SerializedName("surname")
-    @Expose
-    private String surname;
-    @SerializedName("title")
-    @Expose
-    private String title;
-    @SerializedName("accountId")
+    private String forename, surname, title;
     @Expose
     private UUID accountId;
-    @SerializedName("creationDate")
     @Expose
     private Date creationDate;
-
 
     /**
      * A constructor for the account class, when the balance is known
@@ -37,7 +23,7 @@ public class Account {
      * @param title The title of the account holder
      * @param balance The starting balance of the account
      */
-    public Account(String forename, String surname, String title, double balance) {
+    public AccountOld(String forename, String surname, String title, double balance) {
         this.balance = balance;
         this.forename = forename;
         this.surname = surname;
@@ -53,7 +39,7 @@ public class Account {
      * @param surname The surname of the account holder
      * @param title The title of the account holder
      */
-    public Account(String forename, String surname, String title) {
+    public AccountOld(String forename, String surname, String title) {
         this.forename = forename;
         this.surname = surname;
         this.title = title;
@@ -63,11 +49,11 @@ public class Account {
         this.balance = 0.0d;
     }
 
-    public Double getBalance() {
+    public double getBalance() {
         return balance;
     }
 
-    public void setBalance(Double balance) {
+    public void setBalance(double balance) {
         this.balance = balance;
     }
 
@@ -79,7 +65,6 @@ public class Account {
         this.forename = forename;
     }
 
-
     public String getSurname() {
         return surname;
     }
@@ -87,7 +72,6 @@ public class Account {
     public void setSurname(String surname) {
         this.surname = surname;
     }
-
 
     public String getTitle() {
         return title;
@@ -97,15 +81,16 @@ public class Account {
         this.title = title;
     }
 
-
     public UUID getAccountId() {
         return accountId;
     }
-
 
     public Date getCreationDate() {
         return creationDate;
     }
 
-
+    public void addBalance(double balance) {
+        double newBal = this.getBalance() + balance;
+        this.balance = newBal;
+    }
 }
