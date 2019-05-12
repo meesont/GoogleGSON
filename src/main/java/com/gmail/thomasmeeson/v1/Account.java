@@ -1,4 +1,4 @@
-package com.gmail.thomasmeeson;
+package com.gmail.thomasmeeson.v1;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

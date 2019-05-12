@@ -1,11 +1,4 @@
-package com.gmail.thomasmeeson;
-
-import com.google.gson.Gson;
-
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+package com.gmail.thomasmeeson.v1;
 
 public class Core {
 

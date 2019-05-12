@@ -1,4 +1,4 @@
-package com.gmail.thomasmeeson;
+package com.gmail.thomasmeeson.v1;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -40,6 +40,9 @@ public class IOMethods {
         try {
             Writer writer = new FileWriter(fileName + ".json");
 
+            GsonBuilder gsonBuilder = new GsonBuilder();
+            gsonBuilder.setPrettyPrinting();
+//            gsonBuilder.
         } catch (IOException e) {
             e.printStackTrace();
         }

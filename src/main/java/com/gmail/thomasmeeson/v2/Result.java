@@ -1,4 +1,4 @@
-package com.gmail.thomasmeeson;
+package com.gmail.thomasmeeson.v2;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -8,8 +8,8 @@ import java.util.List;
 
 public class Result {
 
-    @SerializedName("accounts")
     @Expose
+    @SerializedName("accounts")
     private List<Account> accounts = new ArrayList<Account>();
 
     public List<Account> getAccounts() {
